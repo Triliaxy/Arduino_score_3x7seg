@@ -98,6 +98,8 @@ digitalWrite(8, LOW);
 digitalWrite(9, LOW);
 digitalWrite(13, LOW);
 
+// EN CAS DE BUG D’AFFICHAGE, MODIFIER CETTE PARTIE
+  
 }
 
 
