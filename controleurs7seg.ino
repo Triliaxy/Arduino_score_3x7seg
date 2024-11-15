@@ -1,8 +1,5 @@
 //var globales
-  int afficheur;
-  int valeurAfficheur1;
-  int valeurAfficheur2;
-  int valeurAfficheur3;
+
 
 /* Fonction setup() */
 void setup() {
@@ -63,22 +60,25 @@ void setup() {
   pinMode(13, OUTPUT);
   digitalWrite(13, LOW);
 
+  // start serial port at 9600 bps:
+  Serial.begin(9600);
+  while (!Serial) {
+    ;  // wait for serial port to connect. Needed for native USB port only
 
 }
 
 
 /** Fonction loop() */
 void loop() {
-  afficheur=3;
-  chiffre1();
-  delay(100);
+
+
 }
 
-// FAIRE FONCTION AFFICHEUR
 
-// STRUCTURE DES BOUCLES CHIFFRE : ORDRE : HAUT, HAUT GAUCHE, HAUT DROIT, CENTRE, BAS GAUCHE, BAS DROIT, BAS
 
-void chiffre0(){
+// BOUCLES CHIFFRE
+
+void chiffre0(int afficheur){
   if(afficheur==1){
     digitalWrite(31, HIGH);
     digitalWrite(29, HIGH);
@@ -105,7 +105,7 @@ void chiffre0(){
 
 
 
-void chiffre1(){
+void chiffre1(int afficheur){
   if(afficheur==1){
     digitalWrite(29, HIGH);
     digitalWrite(35, HIGH);
@@ -118,231 +118,210 @@ void chiffre1(){
   }
 }
 
-/*
-void chiffre2(){
+
+void chiffre2(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(31, HIGH);
+    digitalWrite(29, HIGH);
+    digitalWrite(25, HIGH);
+    digitalWrite(39, HIGH);
+    digitalWrite(27, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(34, HIGH);
+    digitalWrite(32, HIGH);
+    digitalWrite(24, HIGH);
+    digitalWrite(38, HIGH);
+    digitalWrite(28, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(6, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(10, HIGH);
+    digitalWrite(9, HIGH);
   }
 }
 
 
-void chiffre3(){
+void chiffre3(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(31, HIGH);
+    digitalWrite(29, HIGH);
+    digitalWrite(25, HIGH);
+    digitalWrite(35, HIGH);
+    digitalWrite(27, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(34, HIGH);
+    digitalWrite(32, HIGH);
+    digitalWrite(24, HIGH);
+    digitalWrite(30, HIGH);
+    digitalWrite(28, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(6, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
   }
 }
 
 
-void chiffre4(){
+void chiffre4(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(23, HIGH);
+    digitalWrite(25, HIGH);
+    digitalWrite(35, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(22, HIGH);
+    digitalWrite(24, HIGH);
+    digitalWrite(30, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(8, HIGH);
   }
 }
 
 
-void chiffre5(){
+void chiffre5(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(31, HIGH);
+    digitalWrite(23, HIGH);
+    digitalWrite(25, HIGH);
+    digitalWrite(35, HIGH);
+    digitalWrite(27, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(34, HIGH);
+    digitalWrite(22, HIGH);
+    digitalWrite(24, HIGH);
+    digitalWrite(30, HIGH);
+    digitalWrite(28, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
   }
 }
 
 
-void chiffre6(){
+void chiffre6(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(31, HIGH);
+    digitalWrite(23, HIGH);
+    digitalWrite(25, HIGH);
+    digitalWrite(35, HIGH);
+    digitalWrite(27, HIGH);
+    digitalWrite(39, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(34, HIGH);
+    digitalWrite(22, HIGH);
+    digitalWrite(24, HIGH);
+    digitalWrite(30, HIGH);
+    digitalWrite(28, HIGH);
+    digitalWrite(38, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
+    digitalWrite(10, HIGH);
   }
 }
 
 
-void chiffre7(){
+void chiffre7(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(31, HIGH);
+    digitalWrite(29, HIGH);
+    digitalWrite(35, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(34, HIGH);
+    digitalWrite(32, HIGH);
+    digitalWrite(30, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(6, HIGH);
+    digitalWrite(8, HIGH);
   }
 }
 
 
-void chiffre8(){
+void chiffre8(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(31, HIGH);
+    digitalWrite(23, HIGH);
+    digitalWrite(25, HIGH);
+    digitalWrite(35, HIGH);
+    digitalWrite(27, HIGH);
+    digitalWrite(39, HIGH);
+    digitalWrite(29, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(34, HIGH);
+    digitalWrite(22, HIGH);
+    digitalWrite(24, HIGH);
+    digitalWrite(30, HIGH);
+    digitalWrite(28, HIGH);
+    digitalWrite(38, HIGH);
+    digitalWrite(32, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
+    digitalWrite(10, HIGH);
+    digitalWrite(6, HIGH);
   }
 }
 
 
-void chiffre9(){
+void chiffre9(int afficheur){
   if(afficheur==1){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(31, HIGH);
+    digitalWrite(23, HIGH);
+    digitalWrite(25, HIGH);
+    digitalWrite(35, HIGH);
+    digitalWrite(27, HIGH);
+    digitalWrite(29, HIGH);
   } else if (afficheur==2){
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(34, HIGH);
+    digitalWrite(22, HIGH);
+    digitalWrite(24, HIGH);
+    digitalWrite(30, HIGH);
+    digitalWrite(28, HIGH);
+    digitalWrite(32, HIGH);
   } else {
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
-    digitalWrite(, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
+    digitalWrite(6, HIGH);
   }
 }
-*/
 
 
+// FONCTION PRINCIPALE
+
+void mainFunction(){
+
+  if (Serial.available() > 0) {
+    int donneesBrutes = Serial.read();
+    String donnees = String(donneesBrutes);
+    while (donnees.length<3){
+      donnees="0"+donnees;
+    }
+    for(int compteur=0; compteur<3; compteur++){
+      if(donnees[compteur]==0){
+        chiffre0(compteur)
+      } else if()//--------------------------------------------------------------------------------------
+
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+}
 
 
