@@ -1,3 +1,14 @@
+/*
+
+  Author : Triliaxy
+
+  TODO : tests
+  FIXME : 
+
+*/
+
+
+
 //var globales
 
 
