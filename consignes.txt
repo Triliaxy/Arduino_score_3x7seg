@@ -1,1 +1,3 @@
 ARDUINO IDE pour programmer
+
+Code pour afficheur 7 segment, uniquement utilisable avec une configuration privée
