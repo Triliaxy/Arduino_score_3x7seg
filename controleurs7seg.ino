@@ -355,7 +355,7 @@ void mainFunction(){
     while (donnees.length<3){
       donnees="0"+donnees;
     }
-    for(int compteur=0; compteur<3; compteur++){
+    for(int compteur=0; compteur<3; compteur++){ //EN CAS LE BUG, PASSER TOUTES LES VERIFICATIONS D'ÉGALITÉS EN STRINGS
       if(donnees[compteur]==0){
         chiffre0(compteur);
       }else if(donnees[compteur]==1){
