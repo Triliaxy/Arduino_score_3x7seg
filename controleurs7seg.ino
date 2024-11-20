@@ -80,9 +80,6 @@ void setup() {
 
 // FONCTION CHIFFRE
 
-// EN CAS DE BUG, PASSER TOUS LES AFFICHER==0 EN AFFICHER==1 ET LES AFFICHER==1 EN AFFICHER==2
-
-
 void chiffre0(int afficheur) {
   if (afficheur == 0) {
     digitalWrite(31, HIGH);
@@ -107,7 +104,6 @@ void chiffre0(int afficheur) {
     digitalWrite(11, HIGH);
   }
 }
-
 
 
 void chiffre1(int afficheur) {
@@ -332,7 +328,7 @@ void mainFunction() {
 DEBUG-------------------------------------*/
     
 
-    for (int compteur = 0; compteur < 3; compteur++) {  //EN CAS LE BUG, PASSER TOUTES LES VERIFICATIONS D'ÉGALITÉS EN STRINGS
+    for (int compteur = 0; compteur < 3; compteur++) { 
       if (donnees[compteur] == '0') {
         chiffre0(compteur);
       } else if (donnees[compteur] == '1') {
@@ -364,7 +360,7 @@ void loop() {
 
   mainFunction();
   delay(100);
-//probleme : FAIRE EN SORTE QUE CA RESTE AFFICHE JUSQU'A LA PROCHAINE DONNEE
+//probleme : FAIRE EN SORTE QUE CA RESTE AFFICHE JUSQU'A LA PROCHAINE DONNEE -----------------------------------
   digitalWrite(31, LOW);
   digitalWrite(23, LOW);
   digitalWrite(29, LOW);
