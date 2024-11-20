@@ -2,11 +2,11 @@
 
   Author : Triliaxy
 
-  TODO : 
+  TODO : tests
   FIXME : 
 
-*/
 
+*/
 
 
 //var globales
@@ -74,11 +74,13 @@ void setup() {
   // start serial port at 9600 bps:
   Serial.begin(9600);
   while (!Serial) {
-    ;  
+    ;  // wait for serial port to connect. Needed for native USB port only
   }
 }
 
 // FONCTION CHIFFRE
+
+// EN CAS DE BUG, PASSER TOUS LES AFFICHER==0 EN AFFICHER==1 ET LES AFFICHER==1 EN AFFICHER==2
 
 
 void chiffre0(int afficheur) {
@@ -318,9 +320,7 @@ void mainFunction() {
     
     //Serial.print(donnees.length()); DEBUG -----------------------------
     
-
-
-    while (donnees.length() < 4) {
+    while (donnees.length() < 3) {
       donnees = "0" + donnees;
     }
 
@@ -332,7 +332,6 @@ void mainFunction() {
 DEBUG-------------------------------------*/
     
 
-    
     for (int compteur = 0; compteur < 3; compteur++) {  //EN CAS LE BUG, PASSER TOUTES LES VERIFICATIONS D'ÉGALITÉS EN STRINGS
       if (donnees[compteur] == '0') {
         chiffre0(compteur);
@@ -364,7 +363,8 @@ DEBUG-------------------------------------*/
 void loop() {
 
   mainFunction();
-  delay(1000);
+  delay(100);
+//probleme : FAIRE EN SORTE QUE CA RESTE AFFICHE JUSQU'A LA PROCHAINE DONNEE
   digitalWrite(31, LOW);
   digitalWrite(23, LOW);
   digitalWrite(29, LOW);
@@ -389,5 +389,8 @@ void loop() {
   digitalWrite(8, LOW);
   digitalWrite(9, LOW);
   digitalWrite(13, LOW);
+
   
+
+
 }
