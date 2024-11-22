@@ -314,6 +314,31 @@ void mainFunction() {
   if (Serial.available() > 0) {
     String donnees = Serial.readString();
     
+    digitalWrite(31, LOW);
+    digitalWrite(23, LOW);
+    digitalWrite(29, LOW);
+    digitalWrite(25, LOW);
+    digitalWrite(39, LOW);
+    digitalWrite(35, LOW);
+    digitalWrite(27, LOW);
+    digitalWrite(37, LOW);
+    digitalWrite(34, LOW);
+    digitalWrite(22, LOW);
+    digitalWrite(32, LOW);
+    digitalWrite(24, LOW);
+    digitalWrite(38, LOW);
+    digitalWrite(30, LOW);
+    digitalWrite(28, LOW);
+    digitalWrite(36, LOW);
+    digitalWrite(7, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(6, LOW);
+    digitalWrite(12, LOW);
+    digitalWrite(10, LOW);
+    digitalWrite(8, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(13, LOW);
+
     //Serial.print(donnees.length()); DEBUG -----------------------------
     
     while (donnees.length() < 3) {
@@ -359,32 +384,9 @@ DEBUG-------------------------------------*/
 void loop() {
 
   mainFunction();
-  delay(100);
-//probleme : FAIRE EN SORTE QUE CA RESTE AFFICHE JUSQU'A LA PROCHAINE DONNEE -----------------------------------
-  digitalWrite(31, LOW);
-  digitalWrite(23, LOW);
-  digitalWrite(29, LOW);
-  digitalWrite(25, LOW);
-  digitalWrite(39, LOW);
-  digitalWrite(35, LOW);
-  digitalWrite(27, LOW);
-  digitalWrite(37, LOW);
-  digitalWrite(34, LOW);
-  digitalWrite(22, LOW);
-  digitalWrite(32, LOW);
-  digitalWrite(24, LOW);
-  digitalWrite(38, LOW);
-  digitalWrite(30, LOW);
-  digitalWrite(28, LOW);
-  digitalWrite(36, LOW);
-  digitalWrite(7, LOW);
-  digitalWrite(11, LOW);
-  digitalWrite(6, LOW);
-  digitalWrite(12, LOW);
-  digitalWrite(10, LOW);
-  digitalWrite(8, LOW);
-  digitalWrite(9, LOW);
-  digitalWrite(13, LOW);
+ 
+
+
 
   
 
